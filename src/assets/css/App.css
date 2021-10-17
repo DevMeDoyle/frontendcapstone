@@ -131,7 +131,7 @@ body{
 
 .contain{
   background-color: #151515;
-  min-height: 300vh;
+  min-height: 93vh;
   color: white;
   margin-left: 3.9%; 
   margin-top: 0%;
@@ -147,10 +147,18 @@ body{
 
 .featured-content
 {
-  height: 50vh;
+  height: 70vh;
   background-color: tomato;
-  background-image: url(/src/assets/img/f-1.jpg);
+  background-image: url(/src/assets/img/f-t-1.png);
   background-image: linear-gradient(to bottom, rgba(0,0,0,0), #151515);
+  padding: 50px;
+}
+
+.featured-content2
+{
+  height: 60vh;
+  background-image: url(/src/assets/img/f-2.jpg);
+  background-image: lightgray;
   padding: 50px;
 }
 
@@ -179,14 +187,23 @@ body{
 
 .movie-list-container
 {
-  padding: 20px;
-  margin-top: 10%;
+  padding: 0 125px;
+  margin-top: 0%;
+  background-color: black;
 }
 
+.movie-list-wrapper
+{
+  position: relative;
+
+}
 .movie-list-title
 {
   font-size: 30px;
   font-weight: bold;
+  padding-left: 150px;
+  background-color: black;
+  color: white;
 }
 
 .movie-list{
@@ -196,7 +213,8 @@ body{
 }
 
 .movie-list-item{
-  margin-right: 30px;
+  margin-right: 35px;
+  position: relative;
   
 }
 
@@ -204,13 +222,79 @@ body{
  
   transform: scale(1.2);
   margin: 0 30px;
+  opacity: 0.5;
   
 }
+
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desk,
+.movie-list-item:hover .movie-list-item-button
+{
+  opacity: 1;
+}
+
 
 .movie-list-item-img
 {
   transition: all 1s ease-in-out;
-  width: 400px;
+  /* width: 400px;
   height:100px;
+  padding: 10px; */
+  max-width: 250px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.movie-list-item-title
+{
+  background-color: #333;
+  padding: 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 60px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+.movie-list-item-desk
+{
+  background-color: #333;
   padding: 10px;
+  font-size: 12px;
+  position: absolute;
+  top: 30%;
+  left: 50px;
+  width: 200px;
+   opacity: 0;
+   transition: 1s all ease-in-out;
+}
+
+
+.movie-list-item-button
+{
+  padding: 10px;
+  background-color: #4dbf00;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  border:none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+.arrow{
+
+  font-size: 120px;
+  position: absolute;
+  top: 85px;
+  right: 0;
+  color: lightgray;
+  opacity: 0.5;
+  cursor: pointer;
 }
