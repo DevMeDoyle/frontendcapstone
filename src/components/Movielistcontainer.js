@@ -1,14 +1,18 @@
-import React from 'react'
+import React from 'react';
 
- const Movielistcontainer= () => {
+
+
+const Movielistcontainer = () => {
+
+    
     return (
         <div>
             
             
-             <h1 className="movie-list-title">NEW RELEASES</h1>
+             <h1 className="movie-list-title"> </h1>
         </div>
     );
 }
 
-export default Movielistcontainer
 
+export default Movielistcontainer

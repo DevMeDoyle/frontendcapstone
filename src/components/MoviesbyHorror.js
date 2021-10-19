@@ -22,23 +22,23 @@ import Img1 from "../assets/img/1.jpeg";
 
 
 
-const Movielistwrapper = () => {
+const MoviesbyHorror = () => {
 
-  const[movies, setMovies] = useState([]) 
+  const[moviesHorror, setMoviesbyHorror] = useState([]) 
 
 
   useEffect(()=>{
 
-    fetch("http://localhost:5000/movies")
+    fetch("http://localhost:5000/movies?genre=Horror")
     .then((res)=>res.json())
     .then(json=>{
 
-     setMovies(json.data)
+        setMoviesbyHorror(json.data)
 
     })
 },[]);
 
-  console.log(movies)
+  console.log(moviesHorror)
 
 
 
@@ -53,7 +53,7 @@ const Movielistwrapper = () => {
 
           <div className="movie-list">
             
-          {movies.map((movieData)=> (
+          {moviesHorror.map((movieData)=> (
               <div className="movie-list-item">
               <img className="movie-list-item-img" src={Img1} alt=""/>
                 <span className="movie-list-item-title"> {movieData.title}</span>
@@ -78,4 +78,4 @@ const Movielistwrapper = () => {
     )
 }
 
-export default Movielistwrapper
+export default MoviesbyHorror
