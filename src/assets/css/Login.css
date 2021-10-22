@@ -1,0 +1,63 @@
+*{
+    font-family: poppins;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+#myform{
+    margin: 0%;
+    
+}
+
+.L1
+{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+    margin-bottom: 5%;
+}
+
+#myform{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid black;
+    width: 400px;
+    padding: 20px;
+    border-radius:5px 20px 5px 20px ;
+}
+
+
+div.input-container{
+    margin: 25px 0px;
+    text-align: center;
+    
+    
+}
+
+div.login-btn
+{
+    text-align: center;
+}
+
+div.login-btn input{
+    border: 2px solid black;
+    outline: none;
+    background-color: lightpink;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 30%;
+
+
+}
+
+div.footer{
+
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}

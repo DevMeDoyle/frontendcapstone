@@ -1,0 +1,48 @@
+*
+{
+  margin: 0;
+  
+} 
+
+
+
+.form-control-container
+{
+    margin: 0 30%;
+    padding-top: 200px;
+    
+}
+
+
+.fields
+{
+  margin-bottom: 0%;
+}
+
+.titledelete
+{
+  display: flex;
+}
+
+.icons_div
+{
+  display: flex;
+  padding-top:  10px;
+  margin-left: 1%;
+  
+}
+
+.descriptiondelete
+{
+  margin-top: 5%;
+} 
+
+.dropfields
+{
+  display: flex;
+}
+
+.Bth_on
+{
+  margin-top: 5%;
+}
