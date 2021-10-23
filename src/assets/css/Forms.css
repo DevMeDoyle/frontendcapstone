@@ -9,7 +9,7 @@
 .form-control-container
 {
     margin: 0 30%;
-    padding-top: 200px;
+    padding-top: 60px;
     
 }
 
@@ -45,4 +45,11 @@
 .Bth_on
 {
   margin-top: 5%;
+}
+
+.H1LOGO
+{
+  margin-left: 5%;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

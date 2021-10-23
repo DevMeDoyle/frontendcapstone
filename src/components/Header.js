@@ -31,10 +31,13 @@ export const Header = () => {
                         <div className="menu-container">
                             <ul className="menu-list">
                             <li className="menu-list-item active"><a  href="/"> Home </a></li>
-                            <li className="menu-list-item">Movies</li>
-                            <li className="menu-list-item">Series</li>
-                            <li className="menu-list-item">Popular</li>
-                            <li className="menu-list-item">Trends</li>
+                            <li className="menu-list-item">        <a href="/" >Movies</a> </li>
+                            <li className="menu-list-item"> <a href="/" >TV Shows</a> </li>
+                            <li className="menu-list-item"><a href="/" >Genre</a> </li>
+                            
+                
+
+                            
                             
                         </ul>
                     </div>
@@ -62,8 +65,27 @@ export const Header = () => {
                     </div>
             </div>
 
+
+           
+   {/* <FaSearchengin  className="left-menu-icon" /> */} 
+
+   < div className="search-box">
+                    <input className="search-txt" type="text" name="" placeholder="Type To Search"/>
+                        <a className="search-btn" href="#">
+               
+                         <FaSearchengin className=" sicon"/>
+                </a>
+
+                </div>
+
+
+
             <div className="sidebar">
-                <FaSearchengin  className="left-menu-icon" />
+
+           
+
+
+               <br/><br/>
                 <FaHouseUser className="left-menu-icon"/>
                 <FaBookmark className="left-menu-icon"/>
                 <FaUsers className="left-menu-icon"/>

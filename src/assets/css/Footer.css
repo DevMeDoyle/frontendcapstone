@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+}
+
+.footer_list
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  
+    text-align: left;
+}
+
+.select
+{
+    margin-right: 87%;
+    margin-top: 5%;
+    opacity: 0.3;
+    
+}
+
+.footer{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0), #151515);
+    color: whitesmoke;
+    max-height: 60vh;
+    background-color: tomato;
+}

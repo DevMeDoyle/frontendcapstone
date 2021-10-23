@@ -134,7 +134,11 @@ const AddMovieForm = (props) => {
         
         <>
 
-                
+                <Header/>
+
+                {/* <Header/> */}
+
+            <h1 className="H1LOGO">ADMINISTRATOR ADD MOVIE PAGE</h1>
 
         <div className="form" >
 
@@ -146,7 +150,7 @@ const AddMovieForm = (props) => {
 
                                                                 
                                          <div class="field">
-                                        <label class="label">Title</label>
+                                        <label class="label">Title   <FaPen className="icons" onClick={()=>{ alert=("Test") }} /> <FaTrash/> </label> 
                                         <div class="control">
                                             <input class="input" type="text" placeholder="Text input"/>
                                         </div>
@@ -155,7 +159,7 @@ const AddMovieForm = (props) => {
                                         <div class="field">
 
                                         <div class="field">
-                                        <label class="label">Description</label>
+                                        <label class="label">Description <FaPen/> <FaTrash/></label>
                                         <div class="control">
                                             <textarea class="textarea" placeholder="Textarea"></textarea>
                                         </div>
@@ -167,40 +171,48 @@ const AddMovieForm = (props) => {
                                             
                                             
                                         <div class="field">
-                                        <label class="label">Type </label>
+                                        <label class="label">Type</label>
                                         <div class="control">
                                             <div class="select">
                                             <select>
-                                                <option>Select dropdown</option>
-                                                <option>With options</option>
+                                                <option>Movie</option>
+                                                <option>TV SHOW</option>
                                             </select>
                                             </div>
                                         </div>
                                         </div>
                                             
                                         <div class="field">
-                                        <label class="label">Genre </label>
+                                    <label class="label">Genre </label>
                                         <div class="control">
                                             <div class="select">
-                                            <select>
-                                                <option>Select dropdown</option>
-                                                <option>With options</option>
-                                            </select>
+                                                <select>
+                                                    <option>COMEDY</option>
+                                                    <option>HORROR</option>
+                                                    <option>ACTION</option>
+                                                    <option>ADVENTURE</option>
+                                                    <option>WAR</option>
+                                                    <option>WESTERN</option>
+                                                </select>
                                             </div>
                                         </div>
-                                        </div>
+                                 </div>
 
                                         <div class="field">
                                         <label class="label">Ratings </label>
                                         <div class="control">
                                             <div class="select">
                                             <select>
-                                                <option>Select dropdown</option>
-                                                <option>With options</option>
+                                                <option>5 STAR</option>
+                                                <option>4 STAR</option>
+                                                <option>3 STAR</option>
+                                                <option>2 STAR</option>
+                                                <option>1 STAR</option>
+                                              
                                             </select>
                                             </div>
                                         </div>
-                                        </div>
+                                    </div>
                                             
                                             
                                             

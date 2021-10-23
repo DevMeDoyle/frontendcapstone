@@ -7,7 +7,7 @@ const Loginpage = () => {
 
         <>
 
-            <Header/>
+            
         <div className="loginform">
 
                 <div id="myform">

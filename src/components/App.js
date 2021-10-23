@@ -2,6 +2,7 @@
 import '../assets/css/Login.css'
 import '../assets/css/App.css';
 import '../assets/css/Forms.css';
+import '../assets/css/Footer.css';
 import Main from "../components/Main";
 import Movielistcontainer from './Movielistcontainer';
 import Movielistwrapper from './Movielistwrapper';
@@ -10,6 +11,7 @@ import AddMovieForm  from '../pages/AddMovieForm';
 import Home from '../pages/Home'
 import Header  from './Header';
 import Loginpage from './Loginpage';
+import Footer from './Footer'
 
 import {useState,useEffect} from "react";
 
@@ -55,9 +57,9 @@ const addMovie =(newMovie)=>
   return (
     <div>
            {/* <Loginpage/> */}
-
-
-
+              <Home/>
+              <Footer/>
+{/* 
           <Router> 
             <Switch>
 
@@ -71,7 +73,7 @@ const addMovie =(newMovie)=>
              </Route>
 
           </Switch>
-      </Router> 
+      </Router>  */}
     </div>
     
   )
