@@ -24,3 +24,15 @@
     max-height: 60vh;
     background-color: tomato;
 }
+
+.footer h1{
+    color: black;
+}
+
+.footer a{
+    color: black;
+}
+
+.footer p{
+    color: black;
+}

@@ -2,14 +2,14 @@ import React from 'react';
 
 
 
-const Movielistcontainer = () => {
+const Movielistcontainer = (props) => {
 
     
     return (
         <div>
             
             
-             <h1 className="movie-list-title"> </h1>
+             <h1 className="movie-list-title"> {props.title} </h1>
         </div>
     );
 }

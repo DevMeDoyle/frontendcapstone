@@ -1,12 +1,17 @@
-import Header from "./Header"
+import Header from "../components/Header"
+import { useHistory } from "react-router-dom"
 
 
 
 const Loginpage = () => {
+
+    const history = useHistory();
+
     return (
 
         <>
 
+            <Header/>
             
         <div className="loginform">
 
@@ -29,7 +34,9 @@ const Loginpage = () => {
 
                         <div className="login-btn">
 
-                            <input type="submit" value="LOG IN"/>
+
+                            
+                        <input  onClick ={()=>{history.push('/Dashboard')}} type="submit" value="LOG IN"/>
                             
                             </div>  
 

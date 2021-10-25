@@ -31,7 +31,7 @@ export const Header = () => {
                         <div className="menu-container">
                             <ul className="menu-list">
                             <li className="menu-list-item active"><a  href="/"> Home </a></li>
-                            <li className="menu-list-item">        <a href="/" >Movies</a> </li>
+                            <li className="menu-list-item">        <a href="/Movies" >Movies</a> </li>
                             <li className="menu-list-item"> <a href="/" >TV Shows</a> </li>
                             <li className="menu-list-item"><a href="/" >Genre</a> </li>
                             
@@ -43,7 +43,8 @@ export const Header = () => {
                     </div>
                 <div className="profile-container">
 
-                    <img className="profile-picture" src={Profile} alt=""/>
+                        <a href="/Login"> <img className="profile-picture" src={Profile} alt=""/> </a>
+                    
                         <div className="profile-text-container">
                         <span><a  href="/Addform"> Profile </a></span>
                        

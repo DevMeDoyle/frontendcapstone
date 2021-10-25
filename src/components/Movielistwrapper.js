@@ -22,24 +22,9 @@ import Img1 from "../assets/img/1.jpeg";
 
 
 
-const Movielistwrapper = () => {
+const Movielistwrapper = (props) => {
 
-  const[movies, setMovies] = useState([]) 
-
-
-  useEffect(()=>{
-
-    fetch("http://localhost:5000/movies")
-    .then((res)=>res.json())
-    .then(json=>{
-
-     setMovies(json.data)
-
-    })
-},[]);
-
-  console.log(movies)
-
+ 
 
 
     return (
@@ -53,7 +38,7 @@ const Movielistwrapper = () => {
 
           <div className="movie-list">
             
-          {movies.map((movieData)=> (
+          {props.movies.map((movieData)=> (
               <div className="movie-list-item">
               <img className="movie-list-item-img" src={Img1} alt=""/>
                 <span className="movie-list-item-title"> {movieData.title}</span>
