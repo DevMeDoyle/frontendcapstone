@@ -131,7 +131,76 @@ const AddMovieForm = (props) => {
     }
     
 
+          
+//   const[movies, setAMovie] = useState(
 
+//     {
+//     title: "",
+//     description: "",
+//     genre: "",
+//     ratings: "",
+//     releasedate: "",
+//     priceToRent: "",
+//     priceToBuy:"" ,
+//     image: "",
+//     poster: "",
+//     featured: "",
+//     type: "",
+//     dateCreated: ""
+    
+    
+//     }
+
+
+//   ) ;
+
+
+//    useState(()=>{
+    
+    
+//     fetch("http://localhost:5000/movies")
+
+//     METHOD: "POST"
+    
+//     .then((res)=>res.json())
+//     .then(json=>{
+
+//      setAMovies(json.data)
+
+//     })
+// },[]);
+
+
+
+
+const push= ()=>{
+
+
+            const formData = new FormData();
+
+            formData.append('title',title );
+            formData.append('description',description);
+            formData.append('type',type );
+            formData.append('ratings',ratings );
+            formData.append('priceToRent',pricetorent);
+            formData.append('priceToBuy',pricetobuy);
+            // formData.append('poster',poster);
+            formData.append('genre',genre);
+           
+                     
+
+            fetch('https://localhost:5000/movies', {
+            method: 'POST',
+            body: formData,
+            })
+            .then(response => response.json())
+            .then(result => {
+            console.log('Success:', result);
+            })
+            .catch(error => {
+            console.error('Error:', error);
+            });
+            }
 
     return (
 
@@ -148,26 +217,30 @@ const AddMovieForm = (props) => {
 
             
             
-            <form className="a">
+            <form className="a" onSubmit={push}>
+
+
 
                 <div className="form-control-container " >
 
-                                                                  {/* Title */}
-                                         <div class="field">
-                                        <label class="label">Title   <FaPen onClick={(event)=>{alert(`${title} was click`)}} className="icons"  /> <FaTrash/> </label> 
-                                        <div class="control">
-                                            <input className="input" type="text" placeholder="Title" value={title} onChange={(event)=>{ setTitle(event.target.value); }} />
-                                            <span className="error"> {errorTitle}</span> 
-                                        </div>
-                                        </div>
+                                                            {/* Title */}
+                                    <div className="field">
+                                        <label className="label">Title   <FaPen onClick={(event)=>{alert(`${title} was click`)}} className="icons"  /> <FaTrash/> </label> 
+                                            <div className="control">
+                                                <input className="input" type="text" placeholder="Title" value={title} onChange={(event)=>{ setTitle(event.target.value); }} />
+                                                     <div className="error"> {errorTitle}</div> 
+                                            </div>
+                                    </div>  
+
+
                                                                                  {/* Description*/}
                                         <div className="field">
 
-                                        <div class="field">
+                                        <div className="field">
                                         <label className="label">Description <FaPen/> <FaTrash/></label>
-                                        <div class="control">
+                                        <div className="control">
                                             <textarea className="textarea" placeholder="Textarea"   value={description} onChange={(event)=>{setDescription(event.target.value); }}  />
-                                            <span className="error"> {errorDescription}</span> 
+                                            <div className="error"> {errorDescription}</div>  
                                         </div>
                                         </div>
 
@@ -176,28 +249,29 @@ const AddMovieForm = (props) => {
                                         <div className="dropfields">
                                             
                                             
-                                        <div class="field">
-                                        <label class="label">Type</label>
-                                        <div class="control">
-                                            <div class="select">
+                                        <div className="field">
+                                        <label className="label">Type</label>
+                                        <div className="control">
+                                            <div className="select">
                                             <select value={type} onChange={(event)=>{setType(event.target.value); }} >
-                                            <span className="error"> {errorType}</span> 
+                                             
                                                 <option></option>
                                                 <option>Movie</option>
                                                 <option>TV SHOW</option>
                                             </select>
+                                            <div className="error"> {errorType}</div> 
                                             </div>
                                         </div>
                                         </div>
 
                                                      {/* Genre */}
                                             
-                                        <div class="field">
-                                    <label class="label">Genre </label>
-                                        <div class="control">
-                                            <div class="select">
+                                        <div className="field">
+                                    <label className="label">Genre </label>
+                                        <div className="control">
+                                            <div className="select">
                                                 <select value={genre} onChange={(event)=>{setGenre(event.target.value);}} >
-                                                <span className="error"> {errorGenre}</span> 
+                                                
                                                     <option></option>
                                                     <option>COMEDY</option>
                                                     <option>HORROR</option>
@@ -206,6 +280,7 @@ const AddMovieForm = (props) => {
                                                     <option>WAR</option>
                                                     <option>WESTERN</option>
                                                 </select>
+                                                <div className="error"> {errorGenre}</div> 
                                             </div>
                                         </div>
                                  </div>
@@ -216,15 +291,15 @@ const AddMovieForm = (props) => {
                                         <div className="control">
                                             <div className="select">
                                             <select value={ratings} onChange={(event)=>{setRatings(event.target.value);}} >
-                                            <span className="error"> {errorRatings}</span> 
+                                            
                                                 <option></option>
                                                 <option>5 STAR</option>
                                                 <option>4 STAR</option>
                                                 <option>3 STAR</option>
                                                 <option>2 STAR</option>
-                                                <option>1 STAR</option>
-                                              
+                                                <option>1 STAR</option> 
                                             </select>
+                                            <div className="error"> {errorRatings}</div>  
                                             </div>
                                         </div>
                                     </div>
@@ -239,65 +314,65 @@ const AddMovieForm = (props) => {
 
                                     <div className="dropfields">
 
-                                    <div class="field">
-                                        <label class="label">Date Release</label>
-                                        <div class="control">
-                                            <input class="input" type="text" placeholder="Text input"  value={release} onChange={(event)=>{setRelease(event.target.value);}} />
-                                            <span className="error"> {errorRelease}</span> 
+                                    <div className="field">
+                                        <label className="label">Date Release</label>
+                                        <div className="control">
+                                            <input className="input" type="text" placeholder="Text input"  value={release} onChange={(event)=>{setRelease(event.target.value);}} />
+                                            <div className="error"> {errorRelease}</div>  
                                         </div>
                                         </div>
 
-                                        <div class="field">
-                                        <label class="label">Price To Buy</label>
-                                        <div class="control">
-                                            <input class="input" type="text" placeholder="Text input" value={pricetobuy} onChange={(event)=>{setPricetobuy(event.target.value);}}/>
-                                            <span className="error"> {errorPricetobuy}</span> 
+                                        <div className="field">
+                                        <label className="label">Price To Buy</label>
+                                        <div className="control">
+                                            <input className="input" type="text" placeholder="Text input" value={pricetobuy} onChange={(event)=>{setPricetobuy(event.target.value);}}/>
+                                             <div className="error"> {errorPricetobuy}</div>  
                                         </div>
                                         </div>
 
-                                        <div class="field">
-                                        <label class="label">Price To Rent</label>
-                                        <div class="control">
-                                            <input class="input" type="text" placeholder="Text input" value={pricetorent} onChange={(event)=>{setPricetorent(event.target.value);}} />
-                                            <span className="error"> {errorPricetorent}</span> 
+                                        <div className="field">
+                                        <label className="label">Price To Rent</label>
+                                        <div className="control">
+                                            <input className="input" type="text" placeholder="Text input" value={pricetorent} onChange={(event)=>{setPricetorent(event.target.value);}} />
+                                             <div className="error"> {errorPricetorent}</div>  
                                         </div>
                                         </div>
                                     </div>
 
                                      
-                                <div class="file is-normal has-name">
-                                    <label class="file-label">
-                                        <input class="file-input" type="file" name="poster" value={posters} onChange={(event)=>{setPosters(event.target.value);}} />
-                                        <span className="error"> {errorPosters}</span> 
+                                <div className="file is-normal has-name">
+                                    <label className="file-label">
+                                        <input className="file-input" type="file" name="poster" value={posters} onChange={(event)=>{setPosters(event.target.value);}} />
+                                        <div className="error"> {errorPosters}</div>  
 
-                                        <span class="file-cta">
-                                        <span class="file-icon">
-                                            <i class="fas fa-upload"></i>
+                                        <span className="file-cta">
+                                        <span className="file-icon">
+                                            <i className="fas fa-upload"></i>
                                         </span>
-                                        <span class="file-label">
+                                        <span className="file-label">
                                             Poster Image
                                         </span>
                                         </span>
-                                        <span class="file-name">
+                                        <span className="file-name">
                                         Screen Shot 2017-07-29 at 15.54.25.png
                                         </span>
                                     </label>
                                     </div>
 
-                                    <div class="file is-normal has-name">
-                                    <label class="file-label">
+                                    <div className="file is-normal has-name">
+                                    <label className="file-label">
                                         <input class="file-input" type="file" name="movieimg" value={images} onChange={(event)=>{setImage(event.target.value);}} />
-                                        <span className="error"> {errorImages}</span> 
+                                        <div className="error"> {errorImages}</div> 
 
-                                        <span class="file-cta">
-                                        <span class="file-icon">
-                                            <i class="fas fa-upload"></i>
+                                        <span className="file-cta">
+                                        <span className="file-icon">
+                                            <i className="fas fa-upload"></i>
                                         </span>
-                                        <span class="file-label">
+                                        <span className="file-label">
                                             Movie Images file…
                                         </span>
                                         </span>
-                                        <span class="file-name">
+                                        <span className="file-name">
                                         Screen Shot 2017-07-29 at 15.54.25.png
                                         </span>
                                     </label>
@@ -307,39 +382,16 @@ const AddMovieForm = (props) => {
                                     
                                       
 
-                                    <div class="field is-grouped Bth_on">
-                                    <div class="control">
-                                        <button class="button is-link">Submit</button>
+                                    <div className="field is-grouped Bth_on">
+                                    <div className="control">
+                                        <button className="button is-link" type="submit" >Submit</button>
                                     </div>
-                                    <div class="control">
-                                        <button class="button is-link is-light">Cancel</button>
+                                    <div className="control">
+                                        <button className="button is-link is-light">Cancel</button>
                                     </div>
                                     </div>          
                         
 
-                      {/* <button class="button is-rounded fields" onClick={()=>{
-
-                          if(validateForm())
-                          {
-                              const newMovie={
-                                        id: Math.floor(Math.random() *500000) + 1,
-                                        title,
-                                        description,
-                                        genre,
-                                        ratings,
-                                        pricetobuy,
-                                        pricetorent,
-                                        images
-
-
-                              }
-
-                              props.onAddMovie(newMovie)
-                          }
-                        
-
-                      }}>Add</button>
-                      <button class="button is-rounded fields">Submit</button> */}
 
                 
                 </div>
