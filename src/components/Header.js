@@ -34,11 +34,7 @@ export const Header = () => {
                             <li className="menu-list-item">        <a href="/Movies" >Movies</a> </li>
                             <li className="menu-list-item"> <a href="/" >TV Shows</a> </li>
                             <li className="menu-list-item"><a href="/" >Genre</a> </li>
-                            
-                
-
-                            
-                            
+                                                    
                         </ul>
                     </div>
                 <div className="profile-container">
@@ -64,13 +60,8 @@ export const Header = () => {
 
                    
                     </div>
-            </div>
 
-
-           
-   {/* <FaSearchengin  className="left-menu-icon" /> */} 
-
-   < div className="search-box">
+                    < div className="search-box">
                     <input className="search-txt" type="text" name="" placeholder="Type To Search"/>
                         <a className="search-btn" href="#">
                
@@ -78,6 +69,13 @@ export const Header = () => {
                 </a>
 
                 </div>
+            </div>
+
+
+           
+   {/* <FaSearchengin  className="left-menu-icon" /> */} 
+
+   
 
 
 

@@ -36,10 +36,10 @@ const DashBoard = () => {
                                     <a href=""><span className="las la-user-circle"></span><span>All Users</span></a>
                                 </li>
                                 <li>
-                                    <a href=""><span className="las la-tv"></span><span>All Movies</span></a>
+                                    <Link to="/"> <span className="las la-tv"></span><span>All Movies</span> </Link>
                                 </li>
                                 <li>
-                                    <a href=""><span className="las la-tv"></span><span>Add Movies</span></a>
+                                   <Link to="Addform"> <span className="las la-tv"></span><span>Add Movies</span></Link>
                                 </li>
                                 <li>
                                     <a href=""><span className="las la-clipboard-list"></span><span>Add Users</span></a>

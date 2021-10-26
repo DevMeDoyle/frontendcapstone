@@ -14,6 +14,9 @@ import {FaChevronRight} from 'react-icons/fa';
 import Ft1 from "../assets/img/f-t-1.png";
 import Ft2 from "../assets/img/f-t-2.png";
 import Img1 from "../assets/img/1.jpeg";
+import Img6 from "../assets/img/6.jpg";
+import Img10 from "../assets/img/10.jpg";
+import Img19 from "../assets/img/19.jpg";
 
 import React from 'react'
 
@@ -26,19 +29,82 @@ const Main = () => {
             <div className="contain"> 
                     <div className="content-container">
                         <div className="featured-content">
-                            <img className="featured-title" src={Ft1} alt=""/>
-                             <p className="featured-desk"> 
-                             
-                                              lorem Please read the full license text (OFL.txt) to 
-                                              understand the permissions,
-                                            restrictions and requirements for usage, redistribution,
-                                             and modificati You can use them freely in your products &
-                                              projects - print or digital,
-                                            commercial or otherwise.
-                                            
-                                  </p>
 
-                            <button className="featured-button">WATCH</button>
+                           <div className="slider-frame">  
+                                <div className="slide-images">
+
+                                    <div className="img-container">
+                                        <img className="featured-title" src={Ft1} alt=""/>
+                                        <p className="featured-desk"> 
+                                    
+                                                    lorem Please read the full license text (OFL.txt) to 
+                                                    understand the permissions,
+                                                restrictions and requirements for usage, redistribution,
+                                                and modificati You can use them freely in your products &
+                                                    projects - print or digital,
+                                                commercial or otherwise.
+                                                
+                                        </p>
+
+                                        <button className="featured-button">WATCH</button>
+                                 </div>
+
+                                        <div className="img-container">
+                                                 <img className="featured-title" src={Img6} alt=""/>
+                                                         <p className="featured-desk"> 
+                                                
+                                                                    lorem Please read the full license text (OFL.txt) to 
+                                                                    understand the permissions,
+                                                                restrictions and requirements for usage, redistribution,
+                                                                and modificati You can use them freely in your products &
+                                                                    projects - print or digital,
+                                                                commercial or otherwise.
+                                                    
+                                                        </p>
+
+                                                            <button className="featured-button">WATCH</button>
+                                        </div>
+
+                                                <div className="img-container">
+                                                    <img className="featured-title" src={Img10} alt=""/>
+                                                         <p className="featured-desk"> 
+                                        
+                                                                lorem Please read the full license text (OFL.txt) to 
+                                                                understand the permissions,
+                                                            restrictions and requirements for usage, redistribution,
+                                                            and modificati You can use them freely in your products &
+                                                                projects - print or digital,
+                                                            commercial or otherwise.
+                                                        
+                                                        </p>
+
+                                                    <button className="featured-button">WATCH</button>
+
+
+                                                </div>
+
+                                                {/* <div className="img-container">
+                                                    <img className="featured-title" src={Ft1} alt=""/>
+                                                        <p className="featured-desk"> 
+                                    
+                                                            lorem Please read the full license text (OFL.txt) to 
+                                                            understand the permissions,
+                                                        restrictions and requirements for usage, redistribution,
+                                                        and modificati You can use them freely in your products &
+                                                            projects - print or digital,
+                                                        commercial or otherwise.
+                                                        
+                                                    </p>
+
+                                                        <button className="featured-button">WATCH</button>
+
+
+                                                </div> */}
+
+
+                                    </div>
+                                </div>
+                            
                     
 
                          </div>                   

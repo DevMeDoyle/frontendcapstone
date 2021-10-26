@@ -52,7 +52,7 @@ const AddMovieForm = (props) => {
         if(description === "")
 
         {
-            setErrorDescription("Tou must enter a description");
+            setErrorDescription("You must enter a description");
             isValidated = false;
         }
 
@@ -184,24 +184,29 @@ const push= ()=>{
             formData.append('ratings',ratings );
             formData.append('priceToRent',pricetorent);
             formData.append('priceToBuy',pricetobuy);
+            formData.append('releasedate',release);
             // formData.append('poster',poster);
             formData.append('genre',genre);
            
-                     
+    
 
-            fetch('https://localhost:5000/movies', {
+            fetch('http://localhost:5000/movies', {
             method: 'POST',
             body: formData,
             })
             .then(response => response.json())
             .then(result => {
-            console.log('Success:', result);
+
+                alert("WDMA")
+                console.log(result)
+                console.log('Success:');
             })
             .catch(error => {
+                alert("DAMN IT!")
             console.error('Error:', error);
             });
-            }
-
+            
+        }
     return (
 
         
@@ -256,8 +261,8 @@ const push= ()=>{
                                             <select value={type} onChange={(event)=>{setType(event.target.value); }} >
                                              
                                                 <option></option>
-                                                <option>Movie</option>
-                                                <option>TV SHOW</option>
+                                                <option value="movies">Movie</option>
+                                                <option value="tv-shows">TV SHOW</option>
                                             </select>
                                             <div className="error"> {errorType}</div> 
                                             </div>
@@ -273,12 +278,12 @@ const push= ()=>{
                                                 <select value={genre} onChange={(event)=>{setGenre(event.target.value);}} >
                                                 
                                                     <option></option>
-                                                    <option>COMEDY</option>
-                                                    <option>HORROR</option>
-                                                    <option>ACTION</option>
-                                                    <option>ADVENTURE</option>
-                                                    <option>WAR</option>
-                                                    <option>WESTERN</option>
+                                                    <option value="Comedy">COMEDY</option>
+                                                    <option value="Horror">HORROR</option>
+                                                    <option value="Action">ACTION</option>
+                                                    <option value="Adventure">ADVENTURE</option>
+                                                    <option value="War">WAR</option>
+                                                    <option value="Western">WESTERN</option>
                                                 </select>
                                                 <div className="error"> {errorGenre}</div> 
                                             </div>
@@ -293,11 +298,11 @@ const push= ()=>{
                                             <select value={ratings} onChange={(event)=>{setRatings(event.target.value);}} >
                                             
                                                 <option></option>
-                                                <option>5 STAR</option>
-                                                <option>4 STAR</option>
-                                                <option>3 STAR</option>
-                                                <option>2 STAR</option>
-                                                <option>1 STAR</option> 
+                                                <option value="5stars">5 STAR</option>
+                                                <option value="4stars">4 STAR</option>
+                                                <option value="3stars">3 STAR</option>
+                                                <option value="2stars">2 STAR</option>
+                                                <option value="1star">1 STAR</option> 
                                             </select>
                                             <div className="error"> {errorRatings}</div>  
                                             </div>
