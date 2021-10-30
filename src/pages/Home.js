@@ -113,19 +113,19 @@ export const  Home = () => {
 
             <Header/>
 
-             <Main/>
-    
-            <Movielistcontainer title="Featured Movies"/>
+                  <Main/>
+          
+                      <Movielistcontainer title="Featured"/>
 
-            <Movielistwrapper   movies={featuredMovies}/>
+                      <Movielistwrapper   movies={featuredMovies}/>
 
-            <Movielistcontainer  title="Featured TV SHows"/>
+                      <Movielistcontainer  title="Featured Movies"/>
 
-            <Movielistwrapper   movies={featuredTVShows}/>
+                      <Movielistwrapper   movies={featuredTVShows}/>
 
-            <Movielistcontainer/>
+                      <Movielistcontainer/>
 
-            <Movielistwrapper   movies={actionMovies} title="Action TV SHOWS"/>
+                      <Movielistwrapper   movies={actionMovies} title="Action TV SHOWS"/>
 
 
             

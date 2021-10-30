@@ -1,0 +1,23 @@
+*{
+
+   margin: 0;
+   padding:0;
+   font-family: sans-serif;
+}
+
+.FormContainer{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.FormContainer h1{
+
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    
+
+}

@@ -42,7 +42,7 @@ const DashBoard = () => {
                                    <Link to="Addform"> <span className="las la-tv"></span><span>Add Movies</span></Link>
                                 </li>
                                 <li>
-                                    <a href=""><span className="las la-clipboard-list"></span><span>Add Users</span></a>
+                                <Link to="AddUserForm">   <span className="las la-clipboard-list"></span><span>Add Users</span></Link>
                                 </li>
 
                             </ul>

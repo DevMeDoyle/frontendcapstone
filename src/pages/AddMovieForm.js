@@ -129,47 +129,6 @@ const AddMovieForm = (props) => {
         return isValidated;
         
     }
-    
-
-          
-//   const[movies, setAMovie] = useState(
-
-//     {
-//     title: "",
-//     description: "",
-//     genre: "",
-//     ratings: "",
-//     releasedate: "",
-//     priceToRent: "",
-//     priceToBuy:"" ,
-//     image: "",
-//     poster: "",
-//     featured: "",
-//     type: "",
-//     dateCreated: ""
-    
-    
-//     }
-
-
-//   ) ;
-
-
-//    useState(()=>{
-    
-    
-//     fetch("http://localhost:5000/movies")
-
-//     METHOD: "POST"
-    
-//     .then((res)=>res.json())
-//     .then(json=>{
-
-//      setAMovies(json.data)
-
-//     })
-// },[]);
-
 
 
 

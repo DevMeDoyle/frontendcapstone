@@ -39,18 +39,22 @@ const Listofallmovies = () => {
             
             {<h1 className="head">List Of All Movies</h1>}
             
-        <div className="movie-list-c" >
+                    <div className="movie-list-c" >
                     
                     <div className="movie-list-wrapper">
                  
-                           <div className="movie-list">
+                           <div className="movie-lists">
                              
                                 {movies.map((movieData)=> (
                                <div className="movie-list-item">
-                               <img className="movie-list-item-img2" src={Img1} alt=""/>
-                                 <span className="movie-list-item-title"> {movieData.title}</span>
-                               <p className="movie-list-item-desk">{movieData.description}</p>
-                                   <button className="movie-list-item-button">WATCH</button>  
+                               <img className="movie-list-item-img3" src={movieData.image} alt=""/><br/>
+                                 <span className="movie-list-item-titlem"> {movieData.title}</span>
+                               <p className="movie-list-item-desks">{movieData.description}</p><br/>
+                               <div className="pricing">
+                            <div>   <p className="movie-list-item-desks">Rent ${movieData.priceToBuy}.00</p>  <br/></div>&nbsp;&nbsp;&nbsp;
+                            <div>   <p className="movie-list-item-desks">Buy ${movieData.priceToRent}.00</p><br/></div>
+                               </div>
+                                   <button className="movie-list-item-buttons">ADD TO CART</button>  
                              </div>
                  
                              
@@ -66,31 +70,7 @@ const Listofallmovies = () => {
                  
                                   </div>
 
-                                <div className="contain"> 
-                                      <div className="content-container">
-                                          <div className="featured-content2">
-                                              <img className="featured-title1" src={FT2} alt=""/>
-                                                <p className="featured-desk"> 
-                             
-                                                    lorem Please read the full license text (OFL.txt) to 
-                                                    understand the permissions,
-                                                  restrictions and requirements for usage, redistribution,
-                                                  and modificati You can use them freely in your products &
-                                                    projects - print or digital,
-                                                  commercial or otherwise.
-                                            
-                                              </p>
-
-                            <button className="featured-button">WATCH</button>
-                    
-
-                         </div>                   
-              </div>
-
-                       
-
-                    </div>
-
+                          
 
 
 

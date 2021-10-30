@@ -14,7 +14,7 @@ import {FaChevronRight} from 'react-icons/fa';
 import Ft1 from "../assets/img/f-t-1.png";
 import Ft2 from "../assets/img/f-t-2.png";
 import Img1 from "../assets/img/1.jpeg";
-
+import { Link } from "react-router-dom";
 
 
 
@@ -41,11 +41,11 @@ export const Header = () => {
 
                         <a href="/Login"> <img className="profile-picture" src={Profile} alt=""/> </a>
                     
-                        <div className="profile-text-container">
-                        <span><a  href="/Addform"> Profile </a></span>
+                      <Link to="/Login">  <div className="profile-text-container">
+                        <span > Admin </span>
                        
                         <FaCaretDown/>
-                            </div>
+                            </div> </Link>
 
                     <div className="toggle"> 
                     

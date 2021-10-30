@@ -15,6 +15,7 @@ import Loginpage from '../pages/Loginpage';
 import Footer from './Footer'
 import Listofallmovies from '../pages/Listofallmovies';
 import Dashboard from '../pages/Dashboard';
+import AddUserForm from '../pages/AddUserForm';
 
 import {useState,useEffect} from "react";
 
@@ -59,12 +60,14 @@ const addMovie =(newMovie)=>
   
   return (
     <div>
-           {/* <Loginpage/> */}
-              {/* <Home/>
-              <Footer/> */}
+{/*             
+               <Home/>
+            
 
-              {/* <DashBoard/> */}
+               <DashBoard/> */}
               
+              {/* <AddUserForm/>
+              <Loginpage/>  */}
  
           <Router> 
             <Switch>
@@ -75,6 +78,10 @@ const addMovie =(newMovie)=>
 
              <Route exact path="/Addform">
                 <AddMovieForm onAddMovie={addMovie}/>
+                </Route>
+
+                <Route exact path="/AddUserForm">
+                <AddUserForm/>
                 </Route>
 
                 <Route exact path="/Dashboard">

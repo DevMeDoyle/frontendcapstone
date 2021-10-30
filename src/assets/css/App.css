@@ -299,7 +299,7 @@ body{
   /* width: 400px;
   height:100px;
   padding: 10px; */
-  max-width: 250px;
+  max-width: 200px;
   margin: 0 auto;
   justify-items: center;
   border-radius: 20px;
@@ -358,6 +358,7 @@ body{
   color: lightgray;
   opacity: 0.5;
   cursor: pointer;
+  user-select: none;
 }
 
 .search-box
