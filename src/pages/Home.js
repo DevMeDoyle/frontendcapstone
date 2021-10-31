@@ -63,6 +63,25 @@ export const  Home = () => {
     
 }]) ;
 
+const[tvShows, setTvShows] = useState([
+  {
+      
+  
+          title : "",
+          description : "",
+          genre: "",
+          ratings: "",
+          releasedate: "",
+          priceToRent : "",
+          priceToBuy: "",
+          image: "",
+          type:"",
+          poster: ""
+                           
+      
+  }
+]) ;
+
 
     useEffect(()=>{
       
@@ -92,9 +111,7 @@ export const  Home = () => {
   
       })
 
-
-
-      fetch("http://localhost:5000/movies?genre=Action")
+       fetch("http://localhost:5000/movies?genre=Action")
       
       .then((res)=>res.json())
       .then(json=>{
@@ -105,7 +122,25 @@ export const  Home = () => {
         console.log(json.data)
   
       })
+
+      fetch("http://localhost:5000/movies?type=tv-shows&featured=true")
+      
+      .then((res)=>res.json())
+      .then(json=>{
+  
+        setTvShows(json.data)
+
+        console.log("k")
+        console.log(json.data)
+  
+      })
+
+
+
+
   },[]);
+
+  
 
     return (
         <div>
@@ -123,9 +158,10 @@ export const  Home = () => {
 
                       <Movielistwrapper   movies={featuredTVShows}/>
 
-                      <Movielistcontainer/>
+                      <Movielistcontainer title="TV-Shows"/>
+                      <Movielistwrapper   movies={tvShows}/>
 
-                      <Movielistwrapper   movies={actionMovies} title="Action TV SHOWS"/>
+                      
 
 
             

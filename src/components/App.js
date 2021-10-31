@@ -16,6 +16,8 @@ import Footer from './Footer'
 import Listofallmovies from '../pages/Listofallmovies';
 import Dashboard from '../pages/Dashboard';
 import AddUserForm from '../pages/AddUserForm';
+import AllUsers from '../pages/AllUsers';
+import Listofalltvshows from '../pages/Listofalltvshows';
 
 import {useState,useEffect} from "react";
 
@@ -60,6 +62,8 @@ const addMovie =(newMovie)=>
   
   return (
     <div>
+
+      {/* <AllUsers/> */}
 {/*             
                <Home/>
             
@@ -96,6 +100,23 @@ const addMovie =(newMovie)=>
 
              <Route exact path="/Movies">
                 <Listofallmovies/>
+
+                    
+             </Route>
+
+             <Route exact path="/TVSHOWS">
+                <Listofalltvshows/>
+
+                    
+             </Route>
+
+                <Route exact path="/Sign-Up">
+                <AddUserForm/>
+                
+             </Route>
+
+             <Route exact path="/ALLUsers">
+                <AllUsers/>
                 
              </Route>
 

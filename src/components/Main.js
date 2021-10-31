@@ -37,29 +37,19 @@ const Main = () => {
                                         <img className="featured-title" src={Ft1} alt=""/>
                                         <p className="featured-desk"> 
                                     
-                                                    lorem Please read the full license text (OFL.txt) to 
-                                                    understand the permissions,
-                                                restrictions and requirements for usage, redistribution,
-                                                and modificati You can use them freely in your products &
-                                                    projects - print or digital,
-                                                commercial or otherwise.
+                                        With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation-owner in Mississippi.
                                                 
                                         </p>
 
-                                        <button className="featured-button">WATCH</button>
+                                        <button  className="featured-button" onClick="https://www.npmjs.com/package/uuid">Trailer</button>
                                  </div>
 
                                         <div className="img-container">
                                                  <img className="featured-title" src={Img6} alt=""/>
                                                          <p className="featured-desk"> 
                                                 
-                                                                    lorem Please read the full license text (OFL.txt) to 
-                                                                    understand the permissions,
-                                                                restrictions and requirements for usage, redistribution,
-                                                                and modificati You can use them freely in your products &
-                                                                    projects - print or digital,
-                                                                commercial or otherwise.
-                                                    
+                                                         When three different animals become infected with a dangerous pathogen, a primatologist 
+                                                         and a geneticist team up to stop them from destroying Chicago.
                                                         </p>
 
                                                             <button className="featured-button">WATCH</button>

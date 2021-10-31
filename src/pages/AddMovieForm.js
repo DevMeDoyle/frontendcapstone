@@ -18,8 +18,8 @@ const AddMovieForm = (props) => {
     const [release, setRelease] = useState("");
     const [pricetorent, setPricetorent] = useState("");
     const [pricetobuy, setPricetobuy] = useState("");
-    const [images, setImage] = useState("");
-    const [posters, setPosters] = useState("");
+    const [image, setImage] = useState("");
+    const [poster, setPosters] = useState("");
     const [type, setType] = useState("");
 
     const [errorTitle, setErrorTitle] = useState("");
@@ -115,7 +115,7 @@ const AddMovieForm = (props) => {
             setErrorPricetobuy("")
         }
 
-        if(images === "")
+        if(image === "")
 
         {
             setErrorImage("Tou must enter a image");
@@ -132,10 +132,14 @@ const AddMovieForm = (props) => {
 
 
 
-const push= ()=>{
+const push= (e)=>{
 
+    e.preventDefault();
 
             const formData = new FormData();
+            // const myposter = document.querySelector(".file-input")
+
+            // const arr = ['poster','image'];
 
             formData.append('title',title );
             formData.append('description',description);
@@ -144,19 +148,24 @@ const push= ()=>{
             formData.append('priceToRent',pricetorent);
             formData.append('priceToBuy',pricetobuy);
             formData.append('releasedate',release);
-            // formData.append('poster',poster);
+            formData.append('poster',poster.files[0]);
+            formData.append('image',image.files[1]);
+            // for(let i=0;i<myposter.files.length;i++){
+            //     formData.append(arr[i],myposter.files[i])
+            // }
             formData.append('genre',genre);
            
-    
+            console.log(formData)
+
 
             fetch('http://localhost:5000/movies', {
             method: 'POST',
-            body: formData,
+            body: formData
             })
             .then(response => response.json())
             .then(result => {
 
-                alert("WDMA")
+                alert("Movie Was Added Check Movie Listings")
                 console.log(result)
                 console.log('Success:');
             })
@@ -164,7 +173,6 @@ const push= ()=>{
                 alert("DAMN IT!")
             console.error('Error:', error);
             });
-            
         }
     return (
 
@@ -306,7 +314,7 @@ const push= ()=>{
                                      
                                 <div className="file is-normal has-name">
                                     <label className="file-label">
-                                        <input className="file-input" type="file" name="poster" value={posters} onChange={(event)=>{setPosters(event.target.value);}} />
+                                        <input id="poster" className="file-input" type="file" name="poster"  onChange={(event)=>{setPosters(event.target);}} />
                                         <div className="error"> {errorPosters}</div>  
 
                                         <span className="file-cta">
@@ -318,14 +326,14 @@ const push= ()=>{
                                         </span>
                                         </span>
                                         <span className="file-name">
-                                        Screen Shot 2017-07-29 at 15.54.25.png
+                                        {/* Screen Shot 2017-07-29 at 15.54.25.png */}
                                         </span>
                                     </label>
                                     </div>
 
                                     <div className="file is-normal has-name">
                                     <label className="file-label">
-                                        <input class="file-input" type="file" name="movieimg" value={images} onChange={(event)=>{setImage(event.target.value);}} />
+                                        <input className="file-input" type="file" name="movieimg"  onChange={(event)=>{setImage(event.target)}} />
                                         <div className="error"> {errorImages}</div> 
 
                                         <span className="file-cta">
@@ -337,7 +345,7 @@ const push= ()=>{
                                         </span>
                                         </span>
                                         <span className="file-name">
-                                        Screen Shot 2017-07-29 at 15.54.25.png
+                                        {/* Screen Shot 2017-07-29 at 15.54.25.png */}
                                         </span>
                                     </label>
                                     </div>

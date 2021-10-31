@@ -97,7 +97,7 @@ const push= ()=>{
     })
     .catch(error => {
         alert("Error Check Your form")
-    console.error('Error:', error);
+    console.log('Error:', error);
     });
     
 }
@@ -117,7 +117,7 @@ const push= ()=>{
 
                     <form className="b" onSubmit={push}> 
            
-                        <div class="field">
+                        <div className="field">
                                 <label className="label is-small">First Name</label>
                                     <div className="control has-icons-left has-icons-right">
                                         <input className="input is-small" type="text" placeholder="First Name" value={firstName} onChange={(event)=>{ setFirstname(event.target.value); }}/>
@@ -137,7 +137,7 @@ const push= ()=>{
 
                                 <label className="label is-small">Email</label>
                                     <p className="control has-icons-left has-icons-right">
-                                        <input class="input" type="email" placeholder="Email" value={email} onChange={(event)=>{ setEmail(event.target.value); }}/>
+                                        <input className="input" type="email" placeholder="Email" value={email} onChange={(event)=>{ setEmail(event.target.value); }}/>
                                         
                                 </p>
                                 <div className="error"> {errorEmail}</div>
@@ -145,7 +145,7 @@ const push= ()=>{
 
                                 <div className="field">
                                 <label className="label is-small">Password</label>
-                                <p class="control has-icons-left label is-small" >
+                                <p className="control has-icons-left label is-small" >
                                     <input className="input" type="password" placeholder="Password" value={password} onChange={(event)=>{ setPassword(event.target.value); }} />
                                     
                                 </p>

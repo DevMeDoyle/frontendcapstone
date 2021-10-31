@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 const DashBoard = () => {
 
 
+    
+
 
 
     return (
@@ -33,7 +35,7 @@ const DashBoard = () => {
                                     <span>Dashboard</span></a>
                                 </li>
                                 <li>
-                                    <a href=""><span className="las la-user-circle"></span><span>All Users</span></a>
+                                <Link to="AllUsers">   <span className="las la-user-circle"></span><span>All Users</span></Link>
                                 </li>
                                 <li>
                                     <Link to="/"> <span className="las la-tv"></span><span>All Movies</span> </Link>
@@ -142,8 +144,7 @@ const DashBoard = () => {
                         </main>
 
 
-
-
+                   
 
                     </div>
 

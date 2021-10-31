@@ -246,14 +246,17 @@ body{
 
 .movie-list-container
 {
-  padding: 0 125px;
+  padding: 50px 125px;
   margin-top: 0%;
   background-color: black;
+  
 }
 
 .movie-list-wrapper
 {
   position: relative;
+  overflow: hidden;
+
 
 }
 .movie-list-title
@@ -269,6 +272,8 @@ body{
   display: flex;
   height: 300px;
   align-items: center;
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
 }
 
 .movie-list-item{
@@ -339,7 +344,7 @@ body{
   background-color: #4dbf00;
   color: white;
   border-radius: 10px;
-  outline: none;
+  outline: none; 
   border:none;
   cursor: pointer;
   position: absolute;
@@ -354,7 +359,7 @@ body{
   font-size: 120px;
   position: absolute;
   top: 85px;
-  right: 0;
+  right: 0; 
   color: lightgray;
   opacity: 0.5;
   cursor: pointer;
@@ -413,3 +418,35 @@ body{
   color: white;
   font-size: 30px;
 }    
+
+
+/* 
+
+.movie-list-container
+{
+  background-color: white;
+}
+
+.movie-list-item-title
+{
+  color: black;
+}
+
+.navbar-container{
+  background-color: white;
+  color: black;
+}
+
+.sidebar{
+  background-color: white;
+}
+
+.left-menu-icon
+{
+  color: black;
+
+}
+
+.toggle{
+  background-color: black;
+} */

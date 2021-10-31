@@ -32,8 +32,8 @@ export const Header = () => {
                             <ul className="menu-list">
                             <li className="menu-list-item active"><a  href="/"> Home </a></li>
                             <li className="menu-list-item">        <a href="/Movies" >Movies</a> </li>
-                            <li className="menu-list-item"> <a href="/" >TV Shows</a> </li>
-                            <li className="menu-list-item"><a href="/" >Genre</a> </li>
+                            <li className="menu-list-item"> <a href="/TVSHOWS" >TV Shows</a> </li>
+                            <li className="menu-list-item"><a href="/Sign-Up" >Sign Up</a> </li>
                                                     
                         </ul>
                     </div>
