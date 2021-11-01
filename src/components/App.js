@@ -36,7 +36,7 @@ const App = () => {
 
   
   const[movies, setMovies] = useState([]) ;
-
+  const[users, setUsers] = useState([]) 
 
   useEffect(()=>{
     
@@ -63,15 +63,7 @@ const addMovie =(newMovie)=>
   return (
     <div>
 
-      {/* <AllUsers/> */}
-{/*             
-               <Home/>
-            
 
-               <DashBoard/> */}
-              
-              {/* <AddUserForm/>
-              <Loginpage/>  */}
  
           <Router> 
             <Switch>

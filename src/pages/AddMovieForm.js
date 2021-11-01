@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import {useState,useEffect} from "react";
 import Header from '../components/Header';
 import {FaX} from 'react-icons/fa';
@@ -10,6 +11,8 @@ import {FaPen} from 'react-icons/fa'
 
 
 const AddMovieForm = (props) => {
+
+    let redirect = useHistory()
 
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
@@ -148,8 +151,8 @@ const push= (e)=>{
             formData.append('priceToRent',pricetorent);
             formData.append('priceToBuy',pricetobuy);
             formData.append('releasedate',release);
-            formData.append('poster',poster.files[0]);
-            formData.append('image',image.files[1]);
+            // formData.append('poster',poster.files[0]);
+            // formData.append('image',image.files[1]);
             // for(let i=0;i<myposter.files.length;i++){
             //     formData.append(arr[i],myposter.files[i])
             // }
@@ -168,6 +171,7 @@ const push= (e)=>{
                 alert("Movie Was Added Check Movie Listings")
                 console.log(result)
                 console.log('Success:');
+                redirect.push("/Dashboard")
             })
             .catch(error => {
                 alert("DAMN IT!")
@@ -312,7 +316,7 @@ const push= (e)=>{
                                     </div>
 
                                      
-                                <div className="file is-normal has-name">
+                                {/* <div className="file is-normal has-name">
                                     <label className="file-label">
                                         <input id="poster" className="file-input" type="file" name="poster"  onChange={(event)=>{setPosters(event.target);}} />
                                         <div className="error"> {errorPosters}</div>  
@@ -326,7 +330,7 @@ const push= (e)=>{
                                         </span>
                                         </span>
                                         <span className="file-name">
-                                        {/* Screen Shot 2017-07-29 at 15.54.25.png */}
+                                        { Screen Shot 2017-07-29 at 15.54.25.png} 
                                         </span>
                                     </label>
                                     </div>
@@ -345,10 +349,10 @@ const push= (e)=>{
                                         </span>
                                         </span>
                                         <span className="file-name">
-                                        {/* Screen Shot 2017-07-29 at 15.54.25.png */}
+                                         Screen Shot 2017-07-29 at 15.54.25.png 
                                         </span>
                                     </label>
-                                    </div>
+                                    </div> */}
 
 
                                     

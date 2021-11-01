@@ -3,3 +3,26 @@
     margin: 0;
     padding: 0;
 }
+
+.db_text
+{
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.user_info{
+
+    display: flex;
+}
+
+.user_info p{
+
+    color:tomato;
+    font-size: 15px;
+}
+
+.user_info span{
+
+    color:black;
+    font-size: 15px;
+}

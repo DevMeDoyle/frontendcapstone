@@ -1,10 +1,14 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import "../assets/css/Userform.css"
 import Footer from "../components/Footer.js"
 import Header from '../components/Header'
 import {useState,useEffect} from "react";
 
 const AddUserForm = (props) => {
+
+
+    let redirect = useHistory()
 
 
     const [firstName, setFirstname] = useState("");
@@ -71,9 +75,9 @@ const AddUserForm = (props) => {
     
 }
 
-const push= ()=>{
+const push= (e)=>{
 
-
+    e.preventDefault();
     const formData = new FormData();
 
     formData.append('firstName', firstName );
@@ -81,23 +85,21 @@ const push= ()=>{
     formData.append('email',email);
     formData.append('password',password);
    
-   
-
-
     fetch('http://localhost:5000/user', {
     method: 'POST',
-    body: formData,
+    body: formData
     })
     .then(response => response.json())
     .then(result => {
 
-        alert("Welcome")
+        alert("User was Created, Check Users List")
         console.log(result)
         console.log('Success:');
+        redirect.push("/Dashboard")
     })
     .catch(error => {
         alert("Error Check Your form")
-    console.log('Error:', error);
+    console.error('Error:', error);
     });
     
 }

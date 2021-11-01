@@ -46,14 +46,14 @@ const AllUsers = () => {
 <div className="side_bar_menu">
     <ul>
         <li>
-            <a href="" className="active"><span className="las la-igloo"></span>
+            <a href="/Dashboard" className="active"><span className="las la-igloo"></span>
             <span>Dashboard</span></a>
         </li>
         <li>
         <Link to="AllUsers">   <span className="las la-user-circle"></span><span>All Users</span></Link>
         </li>
         <li>
-            <Link to="/"> <span className="las la-tv"></span><span>All Movies</span> </Link>
+            <Link to="/Movies"> <span className="las la-tv"></span><span>All Movies</span> </Link>
         </li>
         <li>
            <Link to="Addform"> <span className="las la-tv"></span><span>Add Movies</span></Link>
@@ -80,7 +80,7 @@ const AllUsers = () => {
             <label for="">
 
                 <span className="las la-bar"></span>
-            </label> Dashboard 
+            </label> Dashboard Users
             </h1>
 
             
@@ -112,8 +112,8 @@ const AllUsers = () => {
     <div className="cards">
         <div className="card-single">
             <div> 
-                <h1>1</h1>
-                <span>Total Number Of Users</span>
+                <h1>Users Created</h1>
+                <span></span>
             </div>
             <div>
 
@@ -121,51 +121,53 @@ const AllUsers = () => {
             </div>
             </div>
 
-            <div className="card-single">
+            {/* <div className="card-single">
             <div> 
-                <h1>4</h1>
+                <h1>.</h1>
                 <span>Total Number Of Movies</span>
             </div>
             <div>
 
                 <span class="las la-tv"></span>
             </div>
-            </div>
+            </div> */}
 
-            <div className="card-single">
+            {/* <div className="card-single">
             <div> 
-                <h1>0</h1>
+                <h1></h1>
                 <span> Created Users</span>
             </div>
             <div>
 
                 <span class="las la-users"></span>
             </div>
-            </div>
+            </div> */}
 
-            <div className="card-single">
+            {/* <div className="card-single">
             <div> 
-                <h1>0</h1>
+                <h1></h1>
                 <span>Added Movies</span>
             </div>
             <div>
 
                 <span class="las la-tv"></span>
             </div>
-            </div>
+            </div> */}
     </div>
+
+    
 
     {users.map((userData)=> (
                                <div className="user-list-item">
                               
                                 
-                              
+                            
                                <div className="user_info">
-                            <div>   <p className="movie-list-item-desks">First Name: {userData.firstName}</p>  </div>
-                            <div>   <p className="movie-list-item-desks">Last Name:{userData.lastName}</p></div>
-                            <div>   <p className="movie-list-item-desks">Email:{userData.email}</p></div>
-                            <div>   <p className="movie-list-item-desks">ID:{userData.id}</p></div>
-                            <div>   <p className="movie-list-item-desks">Registered Date:{userData.dateCreated}</p></div>
+                            <div>   <p className="movie-list-item-desks"> <span className="db_text"> First Name: </span>{userData.firstName}</p></div>&nbsp; &nbsp; 
+                            <div>   <p className="movie-list-item-desks"><span className="db_text">Last Name:</span>{userData.lastName}</p></div>&nbsp; &nbsp;  
+                            <div>   <p className="movie-list-item-desks"><span className="db_text">Email:</span>{userData.email}</p></div>&nbsp; &nbsp; 
+                            <div>   <p className="movie-list-item-desks"><span className="db_text">Registered Date:</span>{userData.dateCreated}</p></div>
+                           
                                </div>
                                
                              </div>

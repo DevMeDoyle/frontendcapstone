@@ -420,33 +420,39 @@ body{
 }    
 
 
-/* 
 
-.movie-list-container
+
+.movie-list-container.active
 {
   background-color: white;
 }
 
-.movie-list-item-title
+.movie-list-item-title.active
 {
   color: black;
 }
 
-.navbar-container{
+.navbar-container.active{
   background-color: white;
   color: black;
 }
 
-.sidebar{
+.sidebar.active{
   background-color: white;
 }
 
-.left-menu-icon
+.left-menu-icon.active
 {
   color: black;
 
 }
 
-.toggle{
+.toggle.active{
   background-color: black;
-} */
+} 
+
+.toggle-ball.active{
+
+  background-color: white;
+  transform: translateX(-20px)
+}

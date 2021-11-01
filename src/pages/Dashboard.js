@@ -2,6 +2,7 @@ import Header from "../components/Header"
 import Profile from "../assets/img/mybio.jpg";
 import '../assets/css/Dashboard.css'
 import { Link } from "react-router-dom";
+import {useState,useEffect} from "react";
 
 
 
@@ -9,11 +10,27 @@ import { Link } from "react-router-dom";
 const DashBoard = () => {
 
 
-    
+    const[users, setUsers] = useState([]) 
 
+    let totalusers;
+    // let array = [53];
+    // let result = array.length;
+    useEffect(()=>{
+
+        fetch("http://localhost:5000/user")
+        .then((res)=>res.json())
+        .then(json=>{
+    
+         totalusers = json.total
+    
+        })
+    },[]);
 
 
     return (
+
+
+
 
         <>
 
@@ -38,7 +55,10 @@ const DashBoard = () => {
                                 <Link to="AllUsers">   <span className="las la-user-circle"></span><span>All Users</span></Link>
                                 </li>
                                 <li>
-                                    <Link to="/"> <span className="las la-tv"></span><span>All Movies</span> </Link>
+                                    <Link to="/Movies"> <span className="las la-tv"></span><span>All Movies</span> </Link>
+                                </li>
+                                <li>
+                                    <Link to="/TVSHOWS"> <span className="las la-tv"></span><span>All TV-SHOWS</span> </Link>
                                 </li>
                                 <li>
                                    <Link to="Addform"> <span className="las la-tv"></span><span>Add Movies</span></Link>
@@ -97,7 +117,7 @@ const DashBoard = () => {
                             <div className="cards">
                                 <div className="card-single">
                                     <div> 
-                                        <h1>1</h1>
+                                        <h1>{totalusers}</h1>
                                         <span>Total Number Of Users</span>
                                     </div>
                                     <div>
@@ -108,7 +128,7 @@ const DashBoard = () => {
 
                                     <div className="card-single">
                                     <div> 
-                                        <h1>4</h1>
+                                        <h1>.</h1>
                                         <span>Total Number Of Movies</span>
                                     </div>
                                     <div>
@@ -119,7 +139,7 @@ const DashBoard = () => {
 
                                     <div className="card-single">
                                     <div> 
-                                        <h1>0</h1>
+                                        <h1>.</h1>
                                         <span> Created Users</span>
                                     </div>
                                     <div>
@@ -130,7 +150,7 @@ const DashBoard = () => {
 
                                     <div className="card-single">
                                     <div> 
-                                        <h1>0</h1>
+                                        <h1>.</h1>
                                         <span>Added Movies</span>
                                     </div>
                                     <div>

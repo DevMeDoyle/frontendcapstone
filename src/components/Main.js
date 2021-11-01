@@ -58,13 +58,9 @@ const Main = () => {
                                                 <div className="img-container">
                                                     <img className="featured-title" src={Img10} alt=""/>
                                                          <p className="featured-desk"> 
-                                        
-                                                                lorem Please read the full license text (OFL.txt) to 
-                                                                understand the permissions,
-                                                            restrictions and requirements for usage, redistribution,
-                                                            and modificati You can use them freely in your products &
-                                                                projects - print or digital,
-                                                            commercial or otherwise.
+                                                         High-strung father-to-be Peter Highman is forced to hitch a ride with aspiring actor Ethan Tremblay
+                                                          on a road trip in order to make it to his child's birth on time.
+                                                                
                                                         
                                                         </p>
 

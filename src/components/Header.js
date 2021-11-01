@@ -18,7 +18,18 @@ import { Link } from "react-router-dom";
 
 
 
+
+
 export const Header = () => {
+
+    const ball = document.querySelector(".toggle-ball");
+    const items = document.querySelectorAll(".container,.movie-list-item-title,.navbar-container,.sidebar.left-menu-icon,.toggle")
+    // ball.addEventListener("click",()=>{
+    //     items.forEach(item=>{
+    //         item.classList.toggle("active")
+    //     })
+    // })
+
     return (
 
         <div>
@@ -39,10 +50,10 @@ export const Header = () => {
                     </div>
                 <div className="profile-container">
 
-                        <a href="/Login"> <img className="profile-picture" src={Profile} alt=""/> </a>
+                        <a href="/Dashboard"> <img className="profile-picture" src={Profile} alt=""/> </a>
                     
                       <Link to="/Login">  <div className="profile-text-container">
-                        <span > Admin </span>
+                        <span > login </span>
                        
                         <FaCaretDown/>
                             </div> </Link>
@@ -51,7 +62,10 @@ export const Header = () => {
                     
                         <FaMoon className="toggle-icon" />
                         <FaSun className="toggle-icon"/>
-                        <div className="toggle-ball"></div>
+                        <div className="toggle-ball" onClick={()=>{items.forEach(item=>{item.classList.toggle(".active")})
+
+
+                        }}></div>
                     
                     </div>
                     
